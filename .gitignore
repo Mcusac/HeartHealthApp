@@ -1,0 +1,6 @@
+# Python-specific ignores
+*.pyc
+__pycache__/
+
+# Configuration files
+config.py
