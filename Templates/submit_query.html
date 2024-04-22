@@ -37,35 +37,26 @@
             </div>
         </div>
     </nav>
+    <br>
     <div class="container-fluid-lower ">
         <div class="container">
-            <hr>
-            <h1 class="blue-title-center"><i class="fas fa-heart"></i> Home </h1>
-            <hr>
-            <div class="row ">
-                <div class="navsmall">
-                    <p></p>
-                    Welcome to the Heart Health platform! This platform provides a method of imputting your concerns or information and receiving an answer.
-                    <br>
-                    <br>
-                    The Heart Failure predictor is trained on a dataset* with many features relating to patient information and a target feature representing whether the individual will suffer from heart failure.
-                    <br>
-                    <br>
-                    This platform utilizes machine learning techniques* to make a prediction on heart health.
-                    There is also an available chatbot built from utilizing a pretrained llm* and a RAG pipeline extracting data from pub med concering "Heart Health".
-                    <p></p>
+            <form action="/submit_query" method="post">
+                <div class="mb-3">
+                    <label for="queryInput" class="form-label">Enter your query:</label>
+                    <input type="text" class="form-control" id="queryInput" name="query" placeholder="Type your query here">
                 </div>
-                <div class="navsmall">
-                    <br>
-                    Check out My GitHub profile:
-                    <br>
-                    <a href="https://github.com/Mcusac"> <i class="fa-brands fa-github"></i>
-                        Matthew D. Cusack</a>
-                    <br>
-                </div>
-            </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
+    <br>
+    <div class="container">
+        <h2>Query Result</h2>
+        <p>{{ response }}</p>
+    </div>
+
+        
+    
 </body>
 
 </html>
