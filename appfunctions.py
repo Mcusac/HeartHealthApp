@@ -87,3 +87,12 @@ def initialize_query_engine():
 #     "I eat a lot of spinach. Will that help reduce heart issues?"
 # )
 # print(str(response))
+
+# Call the function to initialize the query engine
+query_engine = initialize_query_engine()
+
+# Perform a query
+response = query_engine.query(
+    "What are the potential long-term cardiovascular effects of chronic stress, and how do these effects interact with other risk factors such as hypertension, diabetes, and genetic predispositions to exacerbate the overall risk of developing heart disease?"
+)
+print(str(response))
